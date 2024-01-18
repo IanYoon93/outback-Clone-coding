@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+/* 메인슬라이더 */
+.main_slider_wrap .main_slider {
+  height: 900px;
+}
+.main_slider_wrap .swiper-slide {
+  overflow: hidden;
+}
+.main_slider_wrap .swiper-slide a {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+/* 메인슬라이더 버튼 커스텀 */
+.main_slider_wrap .btn_arrow {
+  left: 82px;
+  margin-top: -38px;
+  width: 37px;
+  height: 75px;
+  background: url(../images/btn_main_visual_prev_off.png) no-repeat;
+  transition: all 0.5s;
+}
+.main_slider_wrap .swiper-button-next {
+  left: auto;
+  right: 80px;
+  transform: rotateZ(180deg);
+}
+.main_slider_wrap .btn_arrow:hover {
+  background: url(../images/btn_main_visual_prev_on.png) no-repeat;
+}
+
+/* 메인 슬라이더 페이지네이션 커스텀 */
+.main_slider_wrap .swiper-pagination {
+  bottom: 93px;
+}
+.main_slider_wrap .swiper-pagination span {
+  width: 14px;
+  height: 14px;
+}
+.main_slider_wrap .swiper-pagination .swiper-pagination-bullet {
+  margin: 0 28px;
+  background: #fff;
+  position: relative;
+}
+.main_slider_wrap .swiper-pagination .swiper-pagination-bullet-active:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s 0.5s;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+
+/* 메인 프로덕트 */
+.main_product_wrap {
+  height: 620px;
+  margin: 140px auto 0 auto;
+}
+.main_product_wrap .inner {
+  width: 1180px;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.main_product_wrap .main_product {
+  height: 100%;
+  padding-left: 390px;
+}
+.main_product_wrap .main_product .swiper-slide {
+  width: 790px;
+}
+.main_product_wrap .main_product .swiper-slide .txt_wrap {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  display: block;
+  margin-top: 90px;
+  max-width: 440px;
+  word-break: keep-all;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(0, 0);
+  transition: all 0.4s;
+}
+.main_product_wrap .main_product .swiper-slide-active .txt_wrap {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(0, -50px);
+  transition: all 0.4s 0.3s cubic-bezier(0.445, 0.050, 0.550, 0.950);
+  transition-duration: 0.7s;
+}
+.main_product_wrap .main_product .swiper-slide .txt_wrap .en {
+  font-size: 80px;
+  line-height: 84px;
+  font-family: 'Akrobat',sans-serif;
+}
+.main_product_wrap .main_product .swiper-slide .txt_wrap .ko {
+  display: block;
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 28px;
+  margin-top: 11px;
+}
+.main_product_wrap .main_product .swiper-slide .txt_wrap .info {
+  font-size: 15px;
+  color: #666;
+  margin-top: 29px;
+  max-width: 280px;
+}
+
+.main_product_wrap .main_product .swiper-slide .img_wrap {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 310px;
+  height: 400px;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.main_product_wrap .main_product .swiper-slide-active .img_wrap {
+  width: 480px;
+  height: 620px;
+  right: 0;
+  transition-duration: 0.7s;
+  transition: all 0.4s 0.3s cubic-bezier(0.445, 0.050, 0.550, 0.950);
+}
+.main_product_wrap .main_product .swiper-slide .img_wrap img {
+  width: 100%;
+  height: 100%;
+}
+
+.main_product_wrap .btn_arrow {
+  width: 27px;
+  height: 49px;
+  left: -49px;
+  margin-top: 25px;
+  background: url(../images/btn_prev.png) no-repeat;
+  opacity: 0.13;
+}
+.main_product_wrap .btn_arrow:hover {
+  opacity: 1;
+  transition: all 0.5s;
+}
+.main_product_wrap .swiper-button-next {
+  left: auto;
+  right: -49px;
+  background-image: url(../images/btn_next.png);
+}
+
+/* 메인 베네피트 */
+.main_benefit {
+  padding-top: 245px;
+  position: relative;
+}
+.main_benefit .inner {
+  width: 1180px;
+  min-height: 510px;
+  padding: 90px 15px;
+  margin: 0 auto;
+  overflow: hidden;
+  background: url(../images/benefit01.jpeg) no-repeat;
+}
+
+.main_benefit .txt_wrap {
+  display: block;
+  text-align: center;
+}
+.main_benefit .txt_wrap h3 {
+  font-size: 54px;
+  font-family: 'Akrobat',sans-serif;
+  color: #fff;
+  letter-spacing: 0.03em;
+}
+.main_benefit .txt_wrap p {
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.7;
+  margin-top: 4px;
+}
+
+.main_benefit .benefit {
+  display: block;
+  margin-top: 62px;
+  padding: 0 45px;
+}
+.main_benefit .benefit li {
+  float: left;
+  width: 33.33%;
+  text-align: center;
+}
+.main_benefit .benefit li>a {
+  display: block;
+}
+.main_benefit .benefit li>a span {
+  display: block;
+}
+.main_benefit .benefit .name {
+  font-size: 28px;
+  font-family: 'Akrobat',sans-serif;
+  color: #fff;
+  margin-top: 35px;
+}
+.main_benefit .benefit .info {
+  margin-top: 14px;
+  color: #fff;
+  opacity: 0.7;
+}
+
+.main_benefit .benefit_bg {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 375px;
+  height: 442px;
+  margin: -50px 0 0 -442px;
+  background: url(../images/benefit02.jpeg) no-repeat;
+  z-index: -1;
+}
+
+/* 메인 리워드 */
+.main_reward {
+  padding-top: 80px;
+  position: relative;
+}
+.main_reward .inner {
+  width: 1180px;
+  height: 300px;
+  margin: 0 auto;
+  padding-left: 350px;
+  overflow: hidden;
+  position: relative;
+}
+
+.main_reward .reward_left {
+  position: absolute;
+  left: 0;
+  top: 35px;
+  width: 280px;
+  height: 260px;
+}
+.main_reward .reward_left .tit_wrap {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0 30px 30px 0;
+  background: #fff;
+  z-index: 1;
+}
+.main_reward .reward_left .tit_wrap .tit {
+  font-size: 32px;
+  font-family: 'Akrobat',sans-serif;
+  line-height: 52px;
+  letter-spacing: 0.06em;
+  margin-top: -15px;
+}
+.main_reward .reward_left .tit_wrap .tit strong {
+  font-size: 52px;
+  letter-spacing: 0.06em;
+}
+
+.main_reward .reward_left .tit_wrap .info {
+  font-size: 16px;
+  line-height: 24px;
+  color: #666;
+  margin: 10px 0 20px;
+}
+
+.main_reward .reward_left .tit_wrap .btn_more {
+  display: block;
+  width: 100px;
+  height: 32px;
+  font-size: 13px;
+  color: #fff;
+  line-height: 32px;
+  text-align: center;
+  background: #222;
+}
+
+.main_reward .reward_left .line {
+  width: 280px;
+  height: 260px;
+  border: 5px solid black;
+}
+
+.main_reward .reward_rigth li {
+  float: left;
+  width: 33.33%;
+  margin-top: 33px;
+}
+.main_reward .reward_rigth em {
+  display: block;
+  font-size: 16px;
+  color: #96603d;
+  opacity: 0.4;
+}
+.main_reward .reward_rigth strong {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 3px;
+}
+.main_reward .reward_rigth p {
+  line-height: 21px;
+  height: 61px;
+  color: #666;
+  margin-top: 8px;
+}
